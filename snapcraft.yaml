@@ -1,0 +1,22 @@
+name: scilla
+summary: Information Gathering tool
+description: |
+      Information Gathering tool - DNS / Subdomains / Ports / Directories enumeration
+version: 1.3.3
+grade: stable
+base: core20
+
+confinement: strict
+
+apps:
+  scilla:
+    command: bin/scilla
+    plugs:
+      - home
+      - network
+
+parts:
+  scilla:
+    plugin: go
+    source-type: git
+    source: https://github.com/edoardottt/scilla
